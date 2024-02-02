@@ -1,0 +1,35 @@
+.people-input-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.people-input-form label {
+  margin-bottom: 0.4rem;
+  color: hsl(186, 14%, 43%);
+}
+
+.people-input-form div {
+  position: relative;
+}
+
+.people-input-form div img {
+  position: absolute;
+  top: 50%;
+  left: 4.5%;
+  transform: translateY(-50%);
+}
+
+.people-input-form input {
+  width: 100%;
+  background-color: hsl(189, 41%, 97%);
+  border: none;
+  border-radius: 6px;
+  padding: 0.35rem 1.05rem 0.35rem 2.5rem;
+  font-family: inherit;
+  font-size: 1.5rem;
+  direction: rtl;
+}
+
+.people-input-form input::placeholder {
+  color: #9ebbbd;
+}

@@ -1,0 +1,11 @@
+.calculator {
+  width: 920px;
+  height: 480px;
+  background-color: white;
+  border-radius: 25px;
+  padding: 2rem 2rem 2rem 3rem;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0.85rem;
+}
