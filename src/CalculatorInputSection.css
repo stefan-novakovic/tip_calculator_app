@@ -1,3 +1,9 @@
 .calculator-input-section {
   padding-right: 2.15rem;
 }
+
+@media only screen and (max-width: 991px) {
+  .calculator-input-section {
+    padding-inline: 0.5rem;
+  }
+}

@@ -2,9 +2,9 @@ import React from "react";
 import "./BillInput.css";
 import dollar_icon from "./icon-dollar.svg";
 
-const BillInput = () => {
+const BillInput = ({ bill, setBill }) => {
   return (
-    <form className="bill-input-form">
+    <form className="bill-input-form" onSubmit={(e) => e.preventDefault()}>
       <label htmlFor="bill-input">Bill</label>
       <div>
         <img src={dollar_icon} alt="Dollar icon" />
@@ -13,6 +13,9 @@ const BillInput = () => {
           name="bill-input"
           id="bill-input"
           placeholder="0"
+          value={bill}
+          onChange={(e) => setBill(e.target.value)}
+          style={bill <= 0 ? { outlineColor: "red" } : null}
         />
       </div>
     </form>

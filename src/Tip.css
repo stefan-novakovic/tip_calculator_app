@@ -27,3 +27,26 @@
   color: hsl(186, 14%, 43%);
   background-color: hsl(189, 41%, 97%);
 }
+
+.tip-btns-container .selected-btn {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+
+.tip-btns-container button:hover,
+.tip-btns-container button:focus-visible {
+  background-color: #9fe8df;
+}
+
+.tip-btns-container button:active {
+  filter: brightness(95%);
+}
+
+@media only screen and (max-width: 991px) {
+  .tip-btns-container {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+    margin-bottom: 2rem;
+  }
+}

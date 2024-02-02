@@ -25,11 +25,13 @@
 }
 
 .calculator-output-section .tip-amount__price {
+  max-width: 227px;
   font-size: 47px;
   letter-spacing: -0.4px;
   color: hsl(172, 67%, 45%);
   position: relative;
   bottom: 2px;
+  word-wrap: break-word;
 }
 
 .calculator-output-section .reset-btn {
@@ -41,4 +43,29 @@
   cursor: pointer;
   background-color: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
+}
+
+.calculator-output-section .reset-btn:hover,
+.calculator-output-section .reset-btn:focus-visible {
+  background-color: #9fe8df;
+}
+
+.calculator-output-section .reset-btn:active {
+  filter: brightness(95%);
+}
+
+@media only screen and (max-width: 991px) {
+  .calculator-output-section {
+    padding: 2.45rem 1.5rem 1.65rem;
+  }
+  .calculator-output-section .tip-amount__price {
+    font-size: 30px;
+  }
+
+  .calculator-output-section .row {
+    margin-bottom: 1.45rem;
+  }
+  .calculator-output-section .row:last-child {
+    margin-bottom: 2rem;
+  }
 }

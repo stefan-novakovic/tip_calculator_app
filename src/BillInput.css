@@ -29,9 +29,16 @@
   padding: 0.35rem 1.05rem 0.35rem 2.5rem;
   font-family: inherit;
   font-size: 1.5rem;
-  direction: rtl;
+  text-align: right;
+  outline-color: hsl(172, 67%, 45%);
 }
 
-.bill-input-form input::placeholder {
+.bill-input-form input .bill-input-form input::placeholder {
   color: #9ebbbd;
+}
+
+@media only screen and (max-width: 991px) {
+  .bill-input-form div {
+    margin-bottom: 2rem;
+  }
 }
