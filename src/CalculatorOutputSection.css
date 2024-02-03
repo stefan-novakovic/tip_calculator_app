@@ -54,6 +54,16 @@
   filter: brightness(95%);
 }
 
+.calculator-output-section .reset-btn-disabled {
+  font-family: inherit;
+  font-size: 20px;
+  padding: 0.7rem 0.5rem 0.4rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #0d686d;
+  color: hsla(183, 100%, 15%, 0.5);
+}
+
 @media only screen and (max-width: 991px) {
   .calculator-output-section {
     padding: 2.45rem 1.5rem 1.65rem;

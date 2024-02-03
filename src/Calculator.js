@@ -43,9 +43,13 @@ const Calculator = () => {
         tipAmountTip={tipAmountTip}
         setTotalTip={setTotalTip}
         setTipAmountTip={setTipAmountTip}
+        bill={bill}
         setBill={setBill}
+        tipPercentage={tipPercentage}
         setTipPercentage={setTipPercentage}
+        people={people}
         setPeople={setPeople}
+        customTip={customTip}
         setCustomTip={setCustomTip}
       />
     </section>

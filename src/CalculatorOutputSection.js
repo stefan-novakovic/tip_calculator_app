@@ -5,9 +5,13 @@ const CalculatorOutputSection = ({
   tipAmountTip,
   setTotalTip,
   setTipAmountTip,
+  bill,
   setBill,
+  tipPercentage,
   setTipPercentage,
+  people,
   setPeople,
+  customTip,
   setCustomTip,
 }) => {
   const handleReset = () => {
@@ -41,7 +45,16 @@ const CalculatorOutputSection = ({
         </div>
       </div>
 
-      <button type="button" onClick={handleReset} className="reset-btn">
+      <button
+        type="button"
+        className={
+          bill || tipPercentage || customTip || people
+            ? "reset-btn"
+            : "reset-btn-disabled"
+        }
+        disabled={bill || tipPercentage || customTip || people ? false : true}
+        onClick={handleReset}
+      >
         RESET
       </button>
     </section>
