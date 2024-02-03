@@ -54,6 +54,7 @@ const Tip = ({ tipPrecentage, setTipPercentage, customTip, setCustomTip }) => {
             setCustomTip(e.target.value);
             setTipPercentage(e.target.value);
           }}
+          onFocus={(e) => setTipPercentage(e.target.value)}
         />
       </div>
     </form>
