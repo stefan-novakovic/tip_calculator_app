@@ -1,57 +1,23 @@
 import "./Calculator.css";
-import { useState, useEffect } from "react";
 import CalculatorInputSection from "./CalculatorInputSection";
 import CalculatorOutputSection from "./CalculatorOutputSection";
+import { useEffect, useContext } from "react";
+import DataContext from "./context/DataContext";
+
 const Calculator = () => {
-  const [totalTip, setTotalTip] = useState(0);
-  const [tipAmountTip, setTipAmountTip] = useState(0);
-  const [bill, setBill] = useState("");
-  const [tipPercentage, setTipPercentage] = useState("");
-  const [people, setPeople] = useState("");
-  const [customTip, setCustomTip] = useState("");
+  const { resetOutput, calculateOutput } = useContext(DataContext);
 
   useEffect(() => {
-    if (!bill || !people || !tipPercentage) {
-      setTipAmountTip(0);
-      setTotalTip(0);
-      return;
-    }
-
-    if (bill > 0 && tipPercentage > 0 && people > 0) {
-      setTotalTip((bill / 100) * tipPercentage);
-      const calcTipAmount = ((bill / 100) * tipPercentage) / people;
-      setTipAmountTip(calcTipAmount < 0.01 ? 0.01 : calcTipAmount);
-    }
-  }, [bill, tipPercentage, people]);
+    resetOutput();
+    calculateOutput();
+  }, [resetOutput, calculateOutput]);
 
   return (
     <section className="calculator">
       <h1>Calculator</h1>
 
-      <CalculatorInputSection
-        bill={bill}
-        setBill={setBill}
-        people={people}
-        setPeople={setPeople}
-        tipPrecentage={tipPercentage}
-        setTipPercentage={setTipPercentage}
-        customTip={customTip}
-        setCustomTip={setCustomTip}
-      />
-      <CalculatorOutputSection
-        totalTip={totalTip}
-        tipAmountTip={tipAmountTip}
-        setTotalTip={setTotalTip}
-        setTipAmountTip={setTipAmountTip}
-        bill={bill}
-        setBill={setBill}
-        tipPercentage={tipPercentage}
-        setTipPercentage={setTipPercentage}
-        people={people}
-        setPeople={setPeople}
-        customTip={customTip}
-        setCustomTip={setCustomTip}
-      />
+      <CalculatorInputSection />
+      <CalculatorOutputSection />
     </section>
   );
 };

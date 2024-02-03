@@ -14,17 +14,17 @@
   margin-bottom: 1.65rem;
 }
 
-.calculator-output-section .tip-amount__text h3 {
+.calculator-output-section .text h3 {
   font-size: 16px;
   color: hsl(189, 41%, 97%);
 }
 
-.calculator-output-section .tip-amount__text p {
+.calculator-output-section .text p {
   font-size: 13px;
   color: hsl(184, 14%, 56%);
 }
 
-.calculator-output-section .tip-amount__price {
+.calculator-output-section .price {
   max-width: 227px;
   font-size: 47px;
   letter-spacing: -0.4px;
@@ -68,7 +68,7 @@
   .calculator-output-section {
     padding: 2.45rem 1.5rem 1.65rem;
   }
-  .calculator-output-section .tip-amount__price {
+  .calculator-output-section .price {
     font-size: 30px;
   }
 

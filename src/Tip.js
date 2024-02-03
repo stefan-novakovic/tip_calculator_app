@@ -1,47 +1,28 @@
-import React from "react";
 import "./Tip.css";
+import Button from "./Button";
+import { useContext } from "react";
+import DataContext from "./context/DataContext";
 
-const Tip = ({ tipPrecentage, setTipPercentage, customTip, setCustomTip }) => {
+const Tip = () => {
+  const { tipPrecentage, setTipPercentage, customTip, setCustomTip } =
+    useContext(DataContext);
+
+  const percentagesArray = [5, 10, 15, 25, 50];
   return (
     <form className="tip-input-form" onSubmit={(e) => e.preventDefault()}>
       <p>Select Tip %</p>
       <div className="tip-btns-container">
-        <button
-          className={tipPrecentage === 5 ? "selected-btn" : null}
-          onClick={() => setTipPercentage(5)}
-          type="button"
-        >
-          5%
-        </button>
-        <button
-          className={tipPrecentage === 10 ? "selected-btn" : null}
-          onClick={() => setTipPercentage(10)}
-          type="button"
-        >
-          10%
-        </button>
-        <button
-          className={tipPrecentage === 15 ? "selected-btn" : null}
-          onClick={() => setTipPercentage(15)}
-          type="button"
-        >
-          15%
-        </button>
-        <button
-          className={tipPrecentage === 25 ? "selected-btn" : null}
-          onClick={() => setTipPercentage(25)}
-          type="button"
-        >
-          25%
-        </button>
-        <button
-          className={tipPrecentage === 50 ? "selected-btn" : null}
-          onClick={() => setTipPercentage(50)}
-          type="button"
-        >
-          50%
-        </button>
         <label htmlFor="custom-percentage">Custom Percentage</label>
+        {percentagesArray.map((percentage) => {
+          return (
+            <Button
+              key={percentage}
+              percentage={percentage}
+              tipPrecentage={tipPrecentage}
+              setTipPercentage={setTipPercentage}
+            />
+          );
+        })}
         <input
           type="number"
           name="custom-percentage"
@@ -51,10 +32,12 @@ const Tip = ({ tipPrecentage, setTipPercentage, customTip, setCustomTip }) => {
           max="1000"
           value={customTip}
           onChange={(e) => {
-            setCustomTip(e.target.value);
-            setTipPercentage(e.target.value);
+            setCustomTip(e.target.value ? Number(e.target.value) : "");
+            setTipPercentage(e.target.value ? Number(e.target.value) : "");
           }}
-          onFocus={(e) => setTipPercentage(e.target.value)}
+          onFocus={(e) =>
+            setTipPercentage(e.target.value ? Number(e.target.value) : "")
+          }
         />
       </div>
     </form>
