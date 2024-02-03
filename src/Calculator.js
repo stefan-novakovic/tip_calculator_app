@@ -8,6 +8,7 @@ const Calculator = () => {
   const [bill, setBill] = useState("");
   const [tipPercentage, setTipPercentage] = useState("");
   const [people, setPeople] = useState("");
+  const [customTip, setCustomTip] = useState("");
 
   useEffect(() => {
     if (!bill || !people || !tipPercentage) {
@@ -34,6 +35,8 @@ const Calculator = () => {
         setPeople={setPeople}
         tipPrecentage={tipPercentage}
         setTipPercentage={setTipPercentage}
+        customTip={customTip}
+        setCustomTip={setCustomTip}
       />
       <CalculatorOutputSection
         totalTip={totalTip}
@@ -43,6 +46,7 @@ const Calculator = () => {
         setBill={setBill}
         setTipPercentage={setTipPercentage}
         setPeople={setPeople}
+        setCustomTip={setCustomTip}
       />
     </section>
   );

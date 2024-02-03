@@ -19,6 +19,14 @@
   transform: translateY(-50%);
 }
 
+.people-input-form div p {
+  display: none;
+  color: red;
+  position: absolute;
+  top: -30px;
+  right: 0;
+}
+
 .people-input-form input {
   width: 100%;
   background-color: hsl(189, 41%, 97%);
@@ -29,6 +37,7 @@
   font-size: 1.5rem;
   text-align: right;
   outline-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
 }
 
 .people-input-form input::placeholder {

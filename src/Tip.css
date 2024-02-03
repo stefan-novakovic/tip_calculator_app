@@ -42,6 +42,28 @@
   filter: brightness(95%);
 }
 
+.tip-btns-container label {
+  position: absolute;
+  left: -10000px;
+}
+
+.tip-btns-container input {
+  width: 117.2px;
+  border: none;
+  border-radius: 6px;
+  text-align: right;
+  font-family: inherit;
+  padding-inline: 0.75rem 1rem;
+  font-size: 24px;
+  outline-color: hsl(172, 67%, 45%);
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+}
+
+.tip-btns-container input::placeholder {
+  color: #638484;
+}
+
 @media only screen and (max-width: 991px) {
   .tip-btns-container {
     grid-template-rows: repeat(3, 1fr);

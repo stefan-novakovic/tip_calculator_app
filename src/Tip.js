@@ -1,7 +1,7 @@
 import React from "react";
 import "./Tip.css";
 
-const Tip = ({ tipPrecentage, setTipPercentage }) => {
+const Tip = ({ tipPrecentage, setTipPercentage, customTip, setCustomTip }) => {
   return (
     <form className="tip-input-form" onSubmit={(e) => e.preventDefault()}>
       <p>Select Tip %</p>
@@ -41,7 +41,20 @@ const Tip = ({ tipPrecentage, setTipPercentage }) => {
         >
           50%
         </button>
-        <button type="button">Custom</button>
+        <label htmlFor="custom-percentage">Custom Percentage</label>
+        <input
+          type="number"
+          name="custom-percentage"
+          id="custom-percentage"
+          placeholder="Custom"
+          min="0"
+          max="1000"
+          value={customTip}
+          onChange={(e) => {
+            setCustomTip(e.target.value);
+            setTipPercentage(e.target.value);
+          }}
+        />
       </div>
     </form>
   );

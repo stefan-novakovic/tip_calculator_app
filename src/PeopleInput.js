@@ -19,8 +19,11 @@ const PeopleInput = ({ people, setPeople }) => {
           onChange={(e) =>
             setPeople(e.target.value ? Math.ceil(e.target.value) : "")
           }
-          style={people <= 0 ? { outlineColor: "red" } : null}
+          style={people <= 0 && people !== "" ? { outlineColor: "red" } : null}
         />
+        <p style={people <= 0 && people !== "" ? { display: "block" } : null}>
+          Can't be zero
+        </p>
         <img src={person_icon} alt="Person icon" />
       </div>
     </form>

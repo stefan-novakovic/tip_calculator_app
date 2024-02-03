@@ -8,12 +8,14 @@ const CalculatorOutputSection = ({
   setBill,
   setTipPercentage,
   setPeople,
+  setCustomTip,
 }) => {
   const handleReset = () => {
     setTotalTip(0);
     setTipAmountTip(0);
     setBill("");
     setTipPercentage("");
+    setCustomTip("");
     setPeople("");
   };
 

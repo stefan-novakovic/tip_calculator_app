@@ -10,13 +10,20 @@ const CalculatorInputSection = ({
   setPeople,
   tipPrecentage,
   setTipPercentage,
+  customTip,
+  setCustomTip,
 }) => {
   return (
     <section className="calculator-input-section">
       <h2>Calculator Input</h2>
 
       <BillInput bill={bill} setBill={setBill} />
-      <Tip tipPrecentage={tipPrecentage} setTipPercentage={setTipPercentage} />
+      <Tip
+        tipPrecentage={tipPrecentage}
+        setTipPercentage={setTipPercentage}
+        customTip={customTip}
+        setCustomTip={setCustomTip}
+      />
       <PeopleInput people={people} setPeople={setPeople} />
     </section>
   );

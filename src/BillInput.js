@@ -15,8 +15,11 @@ const BillInput = ({ bill, setBill }) => {
           placeholder="0"
           value={bill}
           onChange={(e) => setBill(e.target.value)}
-          style={bill <= 0 ? { outlineColor: "red" } : null}
+          style={bill <= 0 && bill !== "" ? { outlineColor: "red" } : null}
         />
+        <p style={bill <= 0 && bill !== "" ? { display: "block" } : null}>
+          Can't be zero
+        </p>
       </div>
     </form>
   );
