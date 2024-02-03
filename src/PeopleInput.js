@@ -1,6 +1,6 @@
 import React from "react";
 import "./PeopleInput.css";
-import person_icon from "./icon-person.svg";
+import person_icon from "./img/icon-person.svg";
 
 const PeopleInput = ({ people, setPeople }) => {
   return (

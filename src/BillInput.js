@@ -1,6 +1,6 @@
 import React from "react";
 import "./BillInput.css";
-import dollar_icon from "./icon-dollar.svg";
+import dollar_icon from "./img/icon-dollar.svg";
 
 const BillInput = ({ bill, setBill }) => {
   return (

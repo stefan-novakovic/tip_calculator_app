@@ -1,0 +1,51 @@
+.App {
+  background-color: hsl(185, 41%, 84%);
+}
+
+.App main {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5.45rem;
+}
+
+h1,
+h2 {
+  position: absolute;
+  left: -10000px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+@media only screen and (max-width: 991px) {
+  .App main {
+    padding: 3.1rem 1rem;
+    gap: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .App main {
+    padding: 3.1rem 0;
+  }
+}
+
+@media only screen and (max-height: 933px) {
+  .App main {
+    padding: 3.1rem 0 0;
+    gap: 2.5rem;
+  }
+}
