@@ -13,12 +13,6 @@
   gap: 5.45rem;
 }
 
-h1,
-h2 {
-  position: absolute;
-  left: -10000px;
-}
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;

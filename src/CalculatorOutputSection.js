@@ -8,23 +8,21 @@ const CalculatorOutputSection = () => {
 
   return (
     <section className="calculator-output-section">
-      <h2>Calculator Output</h2>
-
       <div>
         <div className="row">
-          <div className="text">
+          <div className="row__text">
             <h3>Tip Amount</h3>
             <p>/ person</p>
           </div>
-          <p className="price">${tipAmountTip.toFixed(2)}</p>
+          <p className="row__price">${tipAmountTip.toFixed(2)}</p>
         </div>
 
         <div className="row">
-          <div className="text">
+          <div className="row__text">
             <h3>Total</h3>
             <p>/ person</p>
           </div>
-          <p className="price">${totalTip.toFixed(2)}</p>
+          <p className="row__price">${totalTip.toFixed(2)}</p>
         </div>
       </div>
 

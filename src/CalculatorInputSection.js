@@ -6,8 +6,6 @@ import PeopleInput from "./PeopleInput";
 const CalculatorInputSection = () => {
   return (
     <section className="calculator-input-section">
-      <h2>Calculator Input</h2>
-
       <BillInput />
       <Tip />
       <PeopleInput />

@@ -4,7 +4,7 @@ import { useContext } from "react";
 import DataContext from "./context/DataContext";
 
 const Tip = () => {
-  const { tipPrecentage, setTipPercentage, customTip, setCustomTip } =
+  const { tipPercentage, setTipPercentage, customTip, setCustomTip } =
     useContext(DataContext);
 
   const percentagesArray = [5, 10, 15, 25, 50];
@@ -18,7 +18,7 @@ const Tip = () => {
             <Button
               key={percentage}
               percentage={percentage}
-              tipPrecentage={tipPrecentage}
+              tipPercentage={tipPercentage}
               setTipPercentage={setTipPercentage}
             />
           );

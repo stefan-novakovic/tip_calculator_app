@@ -14,8 +14,6 @@ const Calculator = () => {
 
   return (
     <section className="calculator">
-      <h1>Calculator</h1>
-
       <CalculatorInputSection />
       <CalculatorOutputSection />
     </section>
