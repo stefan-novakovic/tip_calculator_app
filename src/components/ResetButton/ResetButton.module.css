@@ -1,0 +1,29 @@
+.resetBtn {
+  font-family: inherit;
+  font-size: 20px;
+  padding: 0.7rem 0.5rem 0.4rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+
+.resetBtn:hover,
+.resetBtn:focus-visible {
+  background-color: #9fe8df;
+}
+
+.resetBtn:active {
+  filter: brightness(95%);
+}
+
+.resetBtnDisabled {
+  font-family: inherit;
+  font-size: 20px;
+  padding: 0.7rem 0.5rem 0.4rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #0d686d;
+  color: hsla(183, 100%, 15%, 0.5);
+}

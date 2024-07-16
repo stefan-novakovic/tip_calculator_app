@@ -1,0 +1,14 @@
+.calculatorOutputSection {
+  padding: 2.7rem 2.5rem 2.5rem;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 991px) {
+  .calculatorOutputSection {
+    padding: 2.45rem 1.5rem 1.65rem;
+  }
+}

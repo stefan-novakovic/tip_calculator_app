@@ -1,0 +1,9 @@
+.calculatorInputSection {
+  padding-right: 2.15rem;
+}
+
+@media only screen and (max-width: 991px) {
+  .calculatorInputSection {
+    padding-inline: 0.5rem;
+  }
+}
