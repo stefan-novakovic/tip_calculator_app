@@ -1,0 +1,26 @@
+.calculator {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0.85rem;
+  width: 100%;
+  max-width: 920px;
+  min-height: 480px;
+  padding: 2rem 2rem 2rem 3rem;
+  background-color: white;
+  border-radius: 25px;
+}
+
+@media only screen and (max-width: 991px) {
+  .calculator {
+    grid-template-rows: 1fr min-content;
+    grid-template-columns: 1fr;
+    padding: 1.25rem 1.5rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 500px) and (max-height: 933px) {
+  .calculator {
+    border-radius: 25px 25px 0 0;
+  }
+}

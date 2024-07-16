@@ -1,0 +1,52 @@
+.peopleInputForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.peopleInputForm label {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  color: hsl(186, 14%, 43%);
+}
+
+.peopleInputForm div {
+  position: relative;
+}
+
+.peopleInputForm div img {
+  position: absolute;
+  top: 50%;
+  left: 4.5%;
+  transform: translateY(-50%);
+}
+
+.peopleInputForm div p {
+  display: none;
+  color: red;
+  position: absolute;
+  top: -30px;
+  right: 0;
+}
+
+.peopleInputForm input {
+  width: 100%;
+  background-color: hsl(189, 41%, 97%);
+  border: none;
+  border-radius: 6px;
+  padding: 0.35rem 1.05rem 0.35rem 2.5rem;
+  font-family: inherit;
+  font-size: 1.5rem;
+  text-align: right;
+  outline-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+
+.peopleInputForm input::placeholder {
+  color: #9ebbbd;
+}
+
+@media only screen and (max-width: 991px) {
+  .peopleInputForm div {
+    margin-bottom: 2rem;
+  }
+}
